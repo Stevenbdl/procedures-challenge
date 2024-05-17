@@ -1,0 +1,33 @@
+.procedures-title {
+  color: #000;
+  /* font-feature-settings: 'clig' off, 'liga' off; */
+  font-family: "Raleway";
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 25px;
+  line-height: normal;
+}
+
+.procedures-container {
+  margin: 99px 411px 0px 88px;
+}
+
+.procedures-item {
+  padding-top: 35px;
+}
+
+
+@media only screen and (max-width: 1100px) {
+  .procedures-container {
+    margin: 55px 0px 0px 0px;
+  }
+  .procedures-title {
+    text-align: center;
+  }
+  
+  .procedures-item.edit-btn {
+    text-align: center;
+  }
+
+}

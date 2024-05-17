@@ -1,0 +1,11 @@
+.edit-procedure-list-modal-title {
+  color: #1E2469;
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Heading 01/medium */
+  font-family: Raleway;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 44.8px */
+}

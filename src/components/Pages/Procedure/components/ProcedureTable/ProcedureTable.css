@@ -1,0 +1,25 @@
+.procedure-table-header {
+  color: #949494;
+  text-align: right;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.procedure-table-column {
+  color: #000;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.procedure-table {
+  overflow-x: scroll;
+  max-height: 365px;
+}

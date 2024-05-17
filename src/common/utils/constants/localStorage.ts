@@ -1,0 +1,1 @@
+export const STORAGE_KEY = "PROCEDURE_LIST_LH";

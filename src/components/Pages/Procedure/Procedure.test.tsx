@@ -4,7 +4,7 @@ import { EDIT_PROCEDURES } from "../../../common/constants/messages";
 import { ProcedureContext } from "../../../common/context/procedure";
 import { Procedure } from "./Procedure";
 
-test("Render procedure page with empty procedures", async () => {
+test("It should render procedure page with empty procedures", async () => {
   const procedures: Procedure[] = [];
 
   render(
@@ -24,7 +24,7 @@ test("Render procedure page with empty procedures", async () => {
   expect(screen.queryByTestId("dialogv2-component")).not.toBeInTheDocument();
 });
 
-test("Render procedure page open Dialog", async () => {
+test("It should render procedure page and open DialogV2", async () => {
   const procedures: Procedure[] = [];
 
   render(

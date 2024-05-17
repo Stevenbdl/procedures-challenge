@@ -16,6 +16,7 @@ export const EditProcedureListTable = ({
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     id: number
   ) => {
+    event.preventDefault();
     const { name: field, value } = event.target;
     setProcedureList(
       [...procedureList].map((procedure) => {
@@ -46,9 +47,21 @@ export const EditProcedureListTable = ({
   };
 
   return (
-    <Grid container className="edit-procedure-list-table" spacing={2}>
+    <Grid
+      container
+      className="edit-procedure-list-table"
+      data-testid="edit-procedure-list-table"
+      spacing={2}
+    >
       {procedureList.map((procedure, index) => (
-        <Grid item xs={12} sm={12} md={12} key={procedure.id}>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={12}
+          key={procedure.id}
+          data-testid="edit-procedure-list-row"
+        >
           <Grid
             container
             spacing={3}
@@ -81,6 +94,7 @@ export const EditProcedureListTable = ({
                 onChange={(e) => handleChange(e, procedure.id)}
                 value={procedure.name}
                 className="edit-procedure-list-table-input"
+                inputProps={{ "aria-label": "name" }}
                 fullWidth
               />
             </Grid>
@@ -95,6 +109,7 @@ export const EditProcedureListTable = ({
                 onChange={(e) => handleChange(e, procedure.id)}
                 value={procedure.code}
                 className="edit-procedure-list-table-input"
+                inputProps={{ "aria-label": "code" }}
                 fullWidth
               />
             </Grid>
@@ -109,6 +124,7 @@ export const EditProcedureListTable = ({
                 onChange={(e) => handleChangeNumeric(e, procedure.id)}
                 value={procedure.reclaimed}
                 className="edit-procedure-list-table-input"
+                inputProps={{ "aria-label": "reclaimed" }}
                 fullWidth
               />
             </Grid>
@@ -123,6 +139,7 @@ export const EditProcedureListTable = ({
                 onChange={(e) => handleChangeNumeric(e, procedure.id)}
                 value={procedure.difference}
                 className="edit-procedure-list-table-input"
+                inputProps={{ "aria-label": "difference" }}
                 fullWidth
               />
             </Grid>
@@ -137,6 +154,7 @@ export const EditProcedureListTable = ({
                 onChange={(e) => handleChangeNumeric(e, procedure.id)}
                 value={procedure.authorized}
                 className="edit-procedure-list-table-input"
+                inputProps={{ "aria-label": "authorized" }}
                 fullWidth
               />
             </Grid>

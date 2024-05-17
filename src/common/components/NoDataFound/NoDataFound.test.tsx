@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import { NO_DATA_MESSAGE } from "../../constants/messages";
 import { NoDataFound } from "./NoDataFound";
 
-test("Render not found message and icon", async () => {
+test("It should render NoDataFound with message and icon", async () => {
   const { container } = render(<NoDataFound />);
 
   const messageElement = container.getElementsByClassName("no-data-found-text");

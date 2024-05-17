@@ -4,7 +4,7 @@ import { DialogV2 } from "./DialogV2";
 
 const TEST_TITLE = "Test";
 
-test("Render open Dialog", async () => {
+test("It should render DialogV2", async () => {
   render(
     <DialogV2 title={TEST_TITLE} open={true} setOpen={() => {}} maxWidth="md" />
   );
@@ -13,7 +13,7 @@ test("Render open Dialog", async () => {
   expect(svgCloseBtn).toBeInTheDocument();
 });
 
-test("Render closed Dialog", async () => {
+test("It should close opened DialogV2", async () => {
   render(
     <DialogV2
       title={TEST_TITLE}

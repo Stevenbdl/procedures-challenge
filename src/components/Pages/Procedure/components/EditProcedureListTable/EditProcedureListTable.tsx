@@ -30,6 +30,17 @@ export const EditProcedureListTable = ({
     );
   };
 
+  const handleChangeNumeric = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    id: number
+  ) => {
+    const { value } = event.target;
+
+    if (/^(0|[1-9][0-9]*)$/.test(value) || value.length === 0) {
+      handleChange(event, id);
+    }
+  };
+
   const handleDelete = (id: number) => {
     setProcedureList(procedureList.filter((procedure) => procedure.id !== id));
   };
@@ -95,7 +106,7 @@ export const EditProcedureListTable = ({
                 variant="outlined"
                 size="small"
                 name="reclaimed"
-                onChange={(e) => handleChange(e, procedure.id)}
+                onChange={(e) => handleChangeNumeric(e, procedure.id)}
                 value={procedure.reclaimed}
                 className="edit-procedure-list-table-input"
                 fullWidth
@@ -109,7 +120,7 @@ export const EditProcedureListTable = ({
                 variant="outlined"
                 size="small"
                 name="difference"
-                onChange={(e) => handleChange(e, procedure.id)}
+                onChange={(e) => handleChangeNumeric(e, procedure.id)}
                 value={procedure.difference}
                 className="edit-procedure-list-table-input"
                 fullWidth
@@ -123,7 +134,7 @@ export const EditProcedureListTable = ({
                 variant="outlined"
                 size="small"
                 name="authorized"
-                onChange={(e) => handleChange(e, procedure.id)}
+                onChange={(e) => handleChangeNumeric(e, procedure.id)}
                 value={procedure.authorized}
                 className="edit-procedure-list-table-input"
                 fullWidth

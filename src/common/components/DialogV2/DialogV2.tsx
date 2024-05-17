@@ -11,7 +11,7 @@ import { Close } from "../../../assets/icons/Close";
 import "./DialogV2.css";
 
 interface Props {
-  title?: JSX.Element;
+  title?: JSX.Element | string;
   maxWidth?: Breakpoint;
   fullWidth?: boolean;
   open: boolean;
@@ -36,10 +36,11 @@ export const DialogV2 = ({
       onClose={handleClose}
       maxWidth={maxWidth}
       fullWidth={fullWidth}
+      data-testid="dialogv2-component"
     >
       <Grid container justifyContent="flex-end">
         <Grid item>
-          <IconButton onClick={handleClose}>
+          <IconButton onClick={handleClose} data-testid="dialogv2-close-btn">
             <Close />
           </IconButton>
         </Grid>

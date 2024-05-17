@@ -2,7 +2,7 @@ import { ThemeProvider } from "@emotion/react";
 import { SnackbarProvider } from "notistack";
 import "./App.css";
 import { StyledMaterialDesignContent, theme } from "./common/theme/theme";
-import { Procedures } from "./components/Pages/Procedure/Procedure";
+import { Procedure } from "./components/Pages/Procedure/Procedure";
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
         }}
         hideIconVariant
       >
-        <Procedures />
+        <Procedure />
       </SnackbarProvider>
     </ThemeProvider>
   );

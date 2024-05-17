@@ -2,15 +2,15 @@ import EditIcon from "@mui/icons-material/Edit";
 import { Button, Grid } from "@mui/material";
 import { useState } from "react";
 import { NoDataFound } from "../../../common/components/NoDataFound/NoDataFound";
+import { EDIT_PROCEDURES } from "../../../common/constants/messages";
 import { ProcedureContext } from "../../../common/context/procedure";
 import { useProcedureStore } from "../../../common/hooks/procedure";
 import "./Procedure.css";
 import { EditProcedureListModal } from "./components/EditProcedureListModal/EditProcedureListModal";
 import { ProcedureTable } from "./components/ProcedureTable/ProcedureTable";
 
-export const Procedures = () => {
+export const Procedure = () => {
   const { procedures, setProcedures, fetchProcedureData } = useProcedureStore();
-
   const [openProcedureModal, setOpenProcedureModal] = useState(false);
   const handleEditProcedure = () => setOpenProcedureModal(true);
 
@@ -45,7 +45,7 @@ export const Procedures = () => {
                     startIcon={<EditIcon />}
                     onClick={handleEditProcedure}
                   >
-                    Editar procedimientos
+                    {EDIT_PROCEDURES}
                   </Button>
                 </Grid>
               </>
@@ -60,7 +60,7 @@ export const Procedures = () => {
                 startIcon={<EditIcon />}
                 onClick={handleEditProcedure}
               >
-                Editar procedimientos
+                {EDIT_PROCEDURES}
               </Button>
             </NoDataFound>
           ) : null}

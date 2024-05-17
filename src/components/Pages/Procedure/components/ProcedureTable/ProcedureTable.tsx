@@ -7,7 +7,12 @@ import "./ProcedureTable.css";
 export const ProcedureTable = () => {
   const { procedures } = useContext(ProcedureContext);
   return (
-    <Grid container spacing={1} className="procedure-table">
+    <Grid
+      container
+      spacing={1}
+      className="procedure-table"
+      data-testid="procedure-table"
+    >
       {procedures.map((procedure, index) => (
         <Grid item md={8} key={procedure.id}>
           <Box
@@ -23,7 +28,7 @@ export const ProcedureTable = () => {
               <Grid item>
                 <Grid container direction="column">
                   <Grid item className="procedure-table-header">
-                    Procedimiento {getProcedureNumber(index + 1)}
+                    {`Procedimiento ${getProcedureNumber(index + 1)}`}
                   </Grid>
                   <Grid item className="procedure-table-column">
                     {procedure.name}

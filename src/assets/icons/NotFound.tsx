@@ -6,6 +6,7 @@ export const NotFound = () => {
       height="134"
       viewBox="0 0 134 134"
       fill="none"
+      data-icon="not-found"
     >
       <path
         opacity="0.1"

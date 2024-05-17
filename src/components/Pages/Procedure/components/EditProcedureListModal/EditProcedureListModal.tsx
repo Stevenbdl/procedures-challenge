@@ -57,9 +57,14 @@ export const EditProcedureListModal = ({ open, setOpen }: Props) => {
       open={open}
       setOpen={setOpen}
       maxWidth="lg"
+      data-testid="edit-procedure-list-modal-component"
       title={
         <Grid container spacing={3}>
-          <Grid item className="edit-procedure-list-modal-title">
+          <Grid
+            item
+            className="edit-procedure-list-modal-title"
+            data-testid="edit-procedure-list-modal-title"
+          >
             Procedimientos
           </Grid>
           <Grid item xs={12} sm={12} md={3}>
@@ -69,6 +74,7 @@ export const EditProcedureListModal = ({ open, setOpen }: Props) => {
               size="small"
               onClick={handleAddProcedure}
               fullWidth
+              data-testid="add-procedure-btn"
             >
               <AddIcon /> Añadir procedimiento
             </Button>

@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { ProcedureContext } from "../../../../../common/context/procedure";
 import { ProcedureTable } from "./ProcedureTable";
 
-test("Render empty procedure table", async () => {
+test("It should render empty procedure table", async () => {
   const procedures: Procedure[] = [];
   render(
     <ProcedureContext.Provider
@@ -21,7 +21,7 @@ test("Render empty procedure table", async () => {
   expect(procedureTableElement.hasChildNodes()).toBe(false);
 });
 
-test("Render populated procedure table", async () => {
+test("it should render populated procedure table and check there is at least a row/record", async () => {
   const procedure: Procedure = {
     id: 1,
     name: "Esclerosis",

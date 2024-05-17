@@ -17,8 +17,8 @@ This project uses localStorage to **emulate** a database.
 ### Running Docker container
 
 ```
-  $ docker pull stevenbdl30/procedures-ui-challenge:v1
-  $ docker run -dp 127.0.0.1:<HOST_PORT>:5173 stevenbdl30/procedures-ui-challenge:v1
+  $ docker pull stevenbdl30/procedures-challenge:latest
+  $ docker run -dp 127.0.0.1:<HOST_PORT>:5173 stevenbdl30/procedures-challenge:latest
 ```
 
 ***After running the Docker container, go to 127.0.0.1:HOST_PORT***

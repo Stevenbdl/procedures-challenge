@@ -22,4 +22,3 @@ This project uses localStorage to **emulate** a database.
 ```
 
 ***After running the Docker container, go to 127.0.0.1:HOST_PORT***
-

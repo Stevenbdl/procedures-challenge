@@ -2,7 +2,7 @@
 
 ## Running the project
 
-To run the project locally, you can run either the project codebase or run a Docker container.
+To run this project locally, you can run either the project codebase or run a Docker container.
 
 This project uses localStorage to **emulate** a database.
 
